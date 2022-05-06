@@ -1,21 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:uudi_challenge/app/app_init.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'UUDI Challenge',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: const HomePage(),
-    );
-  }
-}
+void main() => AppInit.init();
 
