@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "759670154598",
+    "project_id": "uuid-challenge",
+    "storage_bucket": "uuid-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759670154598:android:8691cd635f0887662c54a7",
+        "android_client_info": {
+          "package_name": "com.talis.uudi_challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759670154598-7ohfip6g92gjbno2i3bmnb793lunvb85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhJ2iTOvi6PY_ABeVqrELGGFYXMIqEzYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759670154598-7ohfip6g92gjbno2i3bmnb793lunvb85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

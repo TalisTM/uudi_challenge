@@ -8,6 +8,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'UUDI Challenge',
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
