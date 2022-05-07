@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:uudi_challenge/datasource/get_products.dart';
 import 'package:uudi_challenge/stores/home_store.dart';
 import 'package:uudi_challenge/ui/components/card_product.dart';
+import 'package:uudi_challenge/ui/components/floating_cart_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -40,7 +41,8 @@ class _HomePageState extends State<HomePage> {
             }
           );
         }
-      )
+      ),
+      floatingActionButton: FloatingCartButton(),
     );
   }
 }
