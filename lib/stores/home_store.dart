@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+import 'package:uudi_challenge/datasource/get_products.dart';
 import 'package:uudi_challenge/entities/product_entity.dart';
 part 'home_store.g.dart';
 
@@ -9,6 +10,12 @@ abstract class _HomeStoreBase with Store {
   @observable
   ObservableList<ProductEntity> products = ObservableList<ProductEntity>();
 
+  Future<void> getProducts() async {
+    List<ProductEntity> products = await GetProducts.get();
+    setProduct(products);
+  }
+
   @action
-  void setProducts(List<ProductEntity> value) => products.addAll(value);
+  void setProduct(List<ProductEntity> value) => products = ObservableList.of(value);
+
 }

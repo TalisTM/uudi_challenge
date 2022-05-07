@@ -29,11 +29,11 @@ mixin _$HomeStore on _HomeStoreBase, Store {
       ActionController(name: '_HomeStoreBase', context: context);
 
   @override
-  void setProducts(List<ProductEntity> value) {
+  void setProduct(List<ProductEntity> value) {
     final _$actionInfo = _$_HomeStoreBaseActionController.startAction(
-        name: '_HomeStoreBase.setProducts');
+        name: '_HomeStoreBase.setProduct');
     try {
-      return super.setProducts(value);
+      return super.setProduct(value);
     } finally {
       _$_HomeStoreBaseActionController.endAction(_$actionInfo);
     }
