@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:uudi_challenge/stores/cart_store.dart';
 import 'package:uudi_challenge/ui/components/card_item_cart.dart';
 import 'package:uudi_challenge/ui/components/dialog_widget.dart';
+import 'package:uudi_challenge/ui/components/no_item.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({ Key? key }) : super(key: key);
@@ -54,13 +55,20 @@ class _CartPageState extends State<CartPage> {
       ),
       body: Observer(
         builder: (context) {
-          return ListView.builder(
-            itemCount: cartStore.itens.length,
-            physics: const BouncingScrollPhysics(),
-            itemBuilder: (_, index) {
-              return CardItemCart(cartStore.itens[index]);
-            }
-          );
+          if(cartStore.itens.isNotEmpty) {
+              return ListView.builder(
+              itemCount: cartStore.itens.length,
+              physics: const BouncingScrollPhysics(),
+              itemBuilder: (_, index) {
+                return CardItemCart(cartStore.itens[index]);
+              }
+            );
+          } else {
+            return const NoItem(
+              title: "Carrinho vazio",
+              subtitle: "Os produtos que você adicionar, aparecerão aqui."
+            );
+          }
         }
       )
     );
