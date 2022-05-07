@@ -31,10 +31,13 @@ class AddedCardDialog extends StatelessWidget {
                 ButtonWidget(
                   label: "Ir para o carrinho",
                   outline: true,
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const CartPage())
-                  )
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const CartPage())
+                    );
+                  }
                 ),
                 ButtonWidget(
                   label: "Continuar comprando",
