@@ -80,6 +80,17 @@ mixin _$CartStore on _CartStoreBase, Store {
   }
 
   @override
+  void clear() {
+    final _$actionInfo = _$_CartStoreBaseActionController.startAction(
+        name: '_CartStoreBase.clear');
+    try {
+      return super.clear();
+    } finally {
+      _$_CartStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 itens: ${itens},

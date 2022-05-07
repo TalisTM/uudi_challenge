@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("UUID"),
+        title: const Text("UUID Challenge"),
         centerTitle: true,
       ),
       body: Observer(

@@ -41,4 +41,9 @@ abstract class _CartStoreBase with Store {
       }
     }
   }
+
+  @action
+  void clear() {
+    itens.clear();
+  }
 }

@@ -37,34 +37,30 @@ class DialogWidget extends StatelessWidget {
           ? Text(subTitle!, style: const TextStyle(fontSize: 20))
           : null,
         actions: [
-          Column(
-            children: [
-              if(secundaryLabel != null)
-                TextButton(
-                  child: Text(
-                    secundaryLabel!,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF00bee0),
-                      fontWeight: FontWeight.w500
-                    )
-                  ),
-                  onPressed: secundaryFunc
-                ),
-              if(primarylabel != null)
-                TextButton(
-                  child: Text(
-                    primarylabel!,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF00bee0),
-                      fontWeight: FontWeight.w500
-                    )
-                  ),
-                  onPressed: primaryFunc
+          if(secundaryLabel != null)
+            TextButton(
+              child: Text(
+                secundaryLabel!,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Color(0xFF00bee0),
+                  fontWeight: FontWeight.w500
                 )
-            ],
-          )
+              ),
+              onPressed: secundaryFunc
+            ),
+          if(primarylabel != null)
+            TextButton(
+              child: Text(
+                primarylabel!,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Color(0xFF00bee0),
+                  fontWeight: FontWeight.w500
+                )
+              ),
+              onPressed: primaryFunc
+            )
         ],
       ),
     );
