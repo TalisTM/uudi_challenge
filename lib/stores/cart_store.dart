@@ -13,12 +13,32 @@ abstract class _CartStoreBase with Store {
   ObservableList itens = ObservableList();
 
   @action
-  void addProduct(CardItemEntity value) {
+  void addItem(CardItemEntity value) {
     itens.add(value);
   }
 
   @action
-  void removeProduct(CardItemEntity value) {
+  void removeItem(CardItemEntity value) {
     itens.remove(value);
+  }
+
+  @action
+  void addQuantity(String id) {
+    for(CardItemEntity i in itens){
+      if(i.product.id == id){
+        i.quantity++;
+        break;
+      }
+    }
+  }
+
+  @action
+  void removeQuantity(String id) {
+    for(CardItemEntity i in itens){
+      if(i.product.id == id){
+        i.quantity--;
+        break;
+      }
+    }
   }
 }

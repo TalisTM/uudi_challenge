@@ -36,22 +36,44 @@ mixin _$CartStore on _CartStoreBase, Store {
       ActionController(name: '_CartStoreBase', context: context);
 
   @override
-  void addProduct(CardItemEntity value) {
+  void addItem(CardItemEntity value) {
     final _$actionInfo = _$_CartStoreBaseActionController.startAction(
-        name: '_CartStoreBase.addProduct');
+        name: '_CartStoreBase.addItem');
     try {
-      return super.addProduct(value);
+      return super.addItem(value);
     } finally {
       _$_CartStoreBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
-  void removeProduct(CardItemEntity value) {
+  void removeItem(CardItemEntity value) {
     final _$actionInfo = _$_CartStoreBaseActionController.startAction(
-        name: '_CartStoreBase.removeProduct');
+        name: '_CartStoreBase.removeItem');
     try {
-      return super.removeProduct(value);
+      return super.removeItem(value);
+    } finally {
+      _$_CartStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void addQuantity(String id) {
+    final _$actionInfo = _$_CartStoreBaseActionController.startAction(
+        name: '_CartStoreBase.addQuantity');
+    try {
+      return super.addQuantity(id);
+    } finally {
+      _$_CartStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removeQuantity(String id) {
+    final _$actionInfo = _$_CartStoreBaseActionController.startAction(
+        name: '_CartStoreBase.removeQuantity');
+    try {
+      return super.removeQuantity(id);
     } finally {
       _$_CartStoreBaseActionController.endAction(_$actionInfo);
     }
