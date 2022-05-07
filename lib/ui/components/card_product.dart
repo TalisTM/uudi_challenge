@@ -44,27 +44,31 @@ class CardProduct extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          product.name,
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                            fontWeight: FontWeight.w400,
-                            fontSize: 22
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            product.name,
+                            maxLines: 1,
+                            style: TextStyle(
+                              color: Colors.grey[700],
+                              fontWeight: FontWeight.w400,
+                              overflow: TextOverflow.visible,
+                              fontSize: 20
+                            )
+                          ),
+                          Text(
+                            "R\$ ${product.price.toStringAsFixed(2)}",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xFF00bee0),
+                              fontSize: 18
+                            )
                           )
-                        ),
-                        Text(
-                          "R\$ ${product.price.toStringAsFixed(2)}",
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xFF00bee0),
-                            fontSize: 18
-                          )
-                        )
-                      ],
+                        ],
+                      ),
                     ),
                     ButtonWidget(
                       label: "Comprar",
