@@ -20,7 +20,10 @@ class CardItemCart extends StatelessWidget {
         children: [
           Card(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12)
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Colors.grey[200]!
+              )
             ),
             child: Padding(
               padding: const EdgeInsets.all(5),
@@ -35,7 +38,10 @@ class CardItemCart extends StatelessWidget {
           Expanded(
             child: Card(
                 shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12)
+                borderRadius: BorderRadius.circular(12),
+                side: BorderSide(
+                color: Colors.grey[200]!
+              )
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
