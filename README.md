@@ -1,6 +1,6 @@
 # UUDI Challenge
 
-## Sobre a aplicação
+## 📜 Sobre a aplicação
 
 A aplicação se trata de um teste para a empresa UUDI.
 
@@ -8,7 +8,7 @@ Um aplicativo de gerência de carinho de compras com a carinha da UUDI.
 
 Foi desenvolvido em flutter com a base de dados salva no serviço do Firebase Firestore e imagens no Firebase Storage.
 
-## Apresentação do aplicativo
+## 📱 Apresentação do aplicativo
 
 #### Tela inicial com listagem dos produtos
 <img src="https://user-images.githubusercontent.com/72944360/167314808-e9ba2408-a9c3-4ea2-8a38-76b95c1e7b3c.png" width=30%>
