@@ -23,7 +23,7 @@ class FloatingCartButton extends StatelessWidget {
         ),
         Observer(
           builder: (_) {
-            if(cartStore.itens.isNotEmpty) {
+            if(cartStore.quantityItens > 0) {
               return Positioned(
                 right: 0,
                 child: Container(
