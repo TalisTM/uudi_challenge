@@ -30,6 +30,7 @@ abstract class _CartStoreBase with Store {
         break;
       }
     }
+    itens = itens;
   }
 
   @action
@@ -40,6 +41,7 @@ abstract class _CartStoreBase with Store {
         break;
       }
     }
+    itens = itens;
   }
 
   @action
