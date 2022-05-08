@@ -21,29 +21,33 @@ class FloatingCartButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => const CartPage())
           )
         ),
-        Positioned(
-          right: 0,
-          child: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.amber[800],
-              shape: BoxShape.circle
-            ),
-            height: 23,
-            width: 23,
-            child: Observer(
-              builder: (context) {
-                return Text(
-                  cartStore.quantityItens > 100
-                    ? "99" : cartStore.quantityItens.toString(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600
+        Observer(
+          builder: (_) {
+            if(cartStore.itens.isNotEmpty) {
+              return Positioned(
+                right: 0,
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.amber[800],
+                    shape: BoxShape.circle
+                  ),
+                  height: 23,
+                  width: 23,
+                  child: Text(
+                    cartStore.quantityItens > 100
+                      ? "99" : cartStore.quantityItens.toString(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600
+                    )
                   )
-                );
-              }
-            )
-          ),
+                ),
+              );
+            } else {
+              return const SizedBox();
+            }
+          }
         )
       ],
     );
