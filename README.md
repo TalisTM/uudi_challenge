@@ -1,16 +1,26 @@
-# uudi_challenge
+# UUDI Challenge
 
-A new Flutter project.
+## Sobre a aplicação
 
-## Getting Started
+A aplicação se trata de um teste para a empresa UUDI.
 
-This project is a starting point for a Flutter application.
+Um aplicativo de gerência de carinho de compras com a carinha da UUDI.
 
-A few resources to get you started if this is your first Flutter project:
+Foi desenvolvido em flutter com a base de dados salva no serviço do Firebase Firestore e imagens no Firebase Storage.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Apresentação do aplicativo
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Tela inicial com listagem dos produtos
+<img src="https://user-images.githubusercontent.com/72944360/167314808-e9ba2408-a9c3-4ea2-8a38-76b95c1e7b3c.png" width=30%>
+
+### Diálogo de produto adicionado ao carrinho
+<img src="https://user-images.githubusercontent.com/72944360/167315232-0e822c6f-f2b6-4e69-8875-4ee5d829b766.png" width=30%>
+
+### Tela do carrinho vazio
+<img src="https://user-images.githubusercontent.com/72944360/167315258-e4a4f1bc-1809-4aa5-8875-bd01328f0cee.png" width=30%>
+
+### Tela do carrinho com produtos
+<img src="https://user-images.githubusercontent.com/72944360/167315282-25da29fd-48b0-427a-a568-0022a91f0cc4.png" width=30%>
+
+### Diálogo do botão de limpar carrinho
+<img src="https://user-images.githubusercontent.com/72944360/167315338-814958c5-b28b-417c-978a-77f48919dd01.png" width=30%>
