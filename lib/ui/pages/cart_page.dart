@@ -29,7 +29,7 @@ class _CartPageState extends State<CartPage> {
               return IconButton(
                 color: Colors.white,
                 icon: const Icon(Icons.delete_outline),
-                onPressed: cartStore.itens.isNotEmpty
+                onPressed: cartStore.items.isNotEmpty
                   ? () {
                       showDialog(
                         context: context,
@@ -55,12 +55,12 @@ class _CartPageState extends State<CartPage> {
       ),
       body: Observer(
         builder: (context) {
-          if(cartStore.itens.isNotEmpty) {
+          if(cartStore.items.isNotEmpty) {
               return ListView.builder(
-              itemCount: cartStore.itens.length,
+              itemCount: cartStore.items.length,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (_, index) {
-                return CardItemCart(cartStore.itens[index]);
+                return CardItemCart(cartStore.items[index]);
               }
             );
           } else {

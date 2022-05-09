@@ -7,45 +7,45 @@ class CartStore = _CartStoreBase with _$CartStore;
 abstract class _CartStoreBase with Store {
 
   @computed
-  int get quantityItens => itens.length;
+  int get quantityItems => items.length;
   
   @observable
-  ObservableList itens = ObservableList();
+  ObservableList items = ObservableList();
 
   @action
   void addItem(CardItemEntity value) {
-    itens.add(value);
+    items.add(value);
   }
 
   @action
   void removeItem(CardItemEntity value) {
-    itens.remove(value);
+    items.remove(value);
   }
 
   @action
   void addQuantity(String id) {
-    for(CardItemEntity i in itens){
+    for(CardItemEntity i in items){
       if(i.product.id == id){
         i.quantity++;
         break;
       }
     }
-    itens = itens;
+    items = items;
   }
 
   @action
   void removeQuantity(String id) {
-    for(CardItemEntity i in itens){
+    for(CardItemEntity i in items){
       if(i.product.id == id){
         i.quantity--;
         break;
       }
     }
-    itens = itens;
+    items = items;
   }
 
   @action
   void clear() {
-    itens.clear();
+    items.clear();
   }
 }

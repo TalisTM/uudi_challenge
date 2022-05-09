@@ -9,26 +9,26 @@ part of 'cart_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$CartStore on _CartStoreBase, Store {
-  Computed<int>? _$quantityItensComputed;
+  Computed<int>? _$quantityItemsComputed;
 
   @override
-  int get quantityItens =>
-      (_$quantityItensComputed ??= Computed<int>(() => super.quantityItens,
-              name: '_CartStoreBase.quantityItens'))
+  int get quantityItems =>
+      (_$quantityItemsComputed ??= Computed<int>(() => super.quantityItems,
+              name: '_CartStoreBase.quantityItems'))
           .value;
 
-  late final _$itensAtom = Atom(name: '_CartStoreBase.itens', context: context);
+  late final _$itemsAtom = Atom(name: '_CartStoreBase.items', context: context);
 
   @override
-  ObservableList<dynamic> get itens {
-    _$itensAtom.reportRead();
-    return super.itens;
+  ObservableList<dynamic> get items {
+    _$itemsAtom.reportRead();
+    return super.items;
   }
 
   @override
-  set itens(ObservableList<dynamic> value) {
-    _$itensAtom.reportWrite(value, super.itens, () {
-      super.itens = value;
+  set items(ObservableList<dynamic> value) {
+    _$itemsAtom.reportWrite(value, super.items, () {
+      super.items = value;
     });
   }
 
@@ -93,8 +93,8 @@ mixin _$CartStore on _CartStoreBase, Store {
   @override
   String toString() {
     return '''
-itens: ${itens},
-quantityItens: ${quantityItens}
+items: ${items},
+quantityItems: ${quantityItems}
     ''';
   }
 }

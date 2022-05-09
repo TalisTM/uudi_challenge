@@ -23,7 +23,7 @@ class FloatingCartButton extends StatelessWidget {
         ),
         Observer(
           builder: (_) {
-            if(cartStore.quantityItens > 0) {
+            if(cartStore.quantityItems > 0) {
               return Positioned(
                 right: 0,
                 child: Container(
@@ -35,8 +35,8 @@ class FloatingCartButton extends StatelessWidget {
                   height: 23,
                   width: 23,
                   child: Text(
-                    cartStore.quantityItens > 100
-                      ? "99" : cartStore.quantityItens.toString(),
+                    cartStore.quantityItems > 100
+                      ? "99" : cartStore.quantityItems.toString(),
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600

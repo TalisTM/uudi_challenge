@@ -84,7 +84,7 @@ class CardProduct extends StatelessWidget {
                         //CASO O PRODUTO JA ESTEJA NO CARRINHO: ADICIONA A QUANTIDADE DAQUELE PRODUTO
                         //DO CONTRÁRIO, ADICIONA O PRODUTO NO CARRINHO
                         bool hasItem = false;
-                        for(CardItemEntity i in cartStore.itens) {
+                        for(CardItemEntity i in cartStore.items) {
                           if(i.product.id == item.product.id) {
                             cartStore.addQuantity(item.product.id);
                             hasItem = true;

@@ -85,7 +85,7 @@ class CardItemCart extends StatelessWidget {
                               cartStore.removeQuantity(item.product.id);
                             } else if(item.quantity == 1) {
                               cartStore.removeItem(item);
-                              if(cartStore.itens.isEmpty) {
+                              if(cartStore.items.isEmpty) {
                                 Navigator.pop(context);
                               }
                             }
